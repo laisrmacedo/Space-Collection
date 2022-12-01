@@ -68,19 +68,44 @@ export const Nav = styled.nav`
     padding: 6px;
     cursor: pointer; 
     &:hover{
-      border-radius: 18px;
-      background-color: #303030;
-      transition: background-color 0.3s ease-in;
-    }
+        filter: brightness(5);
+        transition: filter 0.3s ease-in-out;
+      }
   `
 
-  export const ImgCarrinho = styled.img`
+  export const Carrinho = styled.div`
     height: 30px;
-    padding: 6px;
-    cursor: pointer; 
-    &:hover{
-      border-radius: 18px;
-      background-color: #303030;
-      transition: background-color 0.3s ease-in;
+    width: 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    div{
+      display: ${(props) => props.show};
+      justify-content: center;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: red;
+      height: 15px;
+      width: 15px;
+      font-size: 11px;
+      color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      p{
+        position: relative;
+        top: -1px;
+      }
+    }
+
+    img{
+      height: 19px;
+      cursor: pointer; 
+      &:hover{
+        filter: brightness(5);
+        transition: filter 0.3s ease-in-out;
+      }
     }
   `

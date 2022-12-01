@@ -1,6 +1,6 @@
 import {ContainerHeader, 
         ImgLupa, 
-        ImgCarrinho, 
+        Carrinho, 
         HeaderContent, 
         ContainerLogo, 
         ContainerDiv,
@@ -10,6 +10,11 @@ import lupa from '../../img/iconLogin.png'
 import carrinho from '../../img/carrinho.png'
 
 export const Header = (props) => {
+
+  let soma = 0
+  for(let item of props.listCart){
+    soma += item.quantity
+  }
 
   return(
     <>
@@ -34,7 +39,10 @@ export const Header = (props) => {
             <span onClick={() => props.setPage("home")}>HOME</span>
             <span onClick={() => props.setPage("store")}>STORE</span>
             <ImgLupa src={lupa} onClick={() => props.setPage("login")}/>
-            <ImgCarrinho src={carrinho} onClick={() => props.setPage("cart")}/>
+            <Carrinho show={props.listCart.length === 0 ? "none" : "flex"}>
+              <div><p>{soma}</p></div>
+              <img src={carrinho} onClick={() => props.setPage("cart")}/>
+            </Carrinho>
           </Nav>
         </HeaderContent>
       </ContainerHeader>

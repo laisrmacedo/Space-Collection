@@ -19,11 +19,6 @@ const ContainerBody = styled.div`
   flex-direction: column;
   position: relative;
 `
-// const PositionHeader = styled.div`
-//   position: sticky;
-//   top: 0;
-//   z-index: 2;
-// `
 const Footer = styled.footer`
   background-color: black;
   height: 6vh;
@@ -31,13 +26,17 @@ const Footer = styled.footer`
 `
 
 function App() {
-  const [page, setPage] = useState("home")
+  const [page, setPage] = useState("store")
+  const [listCart, setListCart] = useState([])
 
   return (
       <ContainerBody>
         <GlobalStyle/>
-        <Header setPage={setPage}/>
-        <Main page={page}/>
+        <Header setPage={setPage} listCart={listCart}/>
+        <Main 
+          page={page} 
+          listCart={listCart} 
+          setListCart={setListCart}/>
         <Footer/>
       </ContainerBody>
   );

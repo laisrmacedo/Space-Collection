@@ -1,13 +1,13 @@
 import {Card} from '../Card/Card';
 import {FilterArea} from '../FilterArea/FilterArea'
 import {PageLogin} from '../PageLogin/PageLogin'
+import {PageCart} from '../PageCart/PageCart'
 import {ContainerMain,
         ImgBackground,
         PageStore, 
         ContainerFilterArea, 
         ContainerCard,
-        CardName,
-        Description} from './styled'
+        BackgroundCard} from './styled'
 import satellites from '../../Satellites/satellites.json'
 import { useState } from "react"
 
@@ -15,7 +15,7 @@ import { useState } from "react"
 export const Main = (props) => {
   const [inputName, setInputName] = useState("")
   const [radioYear, setRadioYear] = useState("")
-  const [radioPrice, setRadioPrice] = useState("")
+  const [radioPrice, setRadioPrice] = useState("")  
 
   return(
     <ContainerMain>
@@ -26,7 +26,6 @@ export const Main = (props) => {
         <PageStore>
         <ContainerFilterArea>
           <FilterArea
-            // setInfoFilter={setInfoFilter}
             inputName={inputName}
             setInputName={setInputName}
             radioYear={radioYear}
@@ -55,17 +54,14 @@ export const Main = (props) => {
               }
             })
             .map((satellite) => {
-              return (<CardName>
-                <Description>{satellite.description}</Description>
+              return (<BackgroundCard key={satellite.id}>
+                <p>{satellite.description}</p>
                 <Card 
-                name={satellite.name} 
-                image={satellite.image}
-                year={satellite.year}
-                price={satellite.price} 
-                description={satellite.description} 
-                link={satellite.link}
+                satellite={satellite}
+                listCart={props.listCart}
+                setListCart={props.setListCart}
                 />
-              </CardName>)
+              </BackgroundCard>)
             })
           }
         </ContainerCard>
@@ -73,7 +69,10 @@ export const Main = (props) => {
       : props.page === "login"?
         <PageLogin/>
       : 
-        <p>CARRINHo</p>
+        <PageCart
+        listCart={props.listCart}
+        setListCart={props.setListCart}
+        />
       }
     </ContainerMain>
   )
