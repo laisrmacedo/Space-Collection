@@ -10,28 +10,37 @@ import {ContainerCard,
         Information, 
         Price } from "./styled"
 import coin from '../../assets/coin.png'
-import { useState } from "react"
+import { useContext, useState } from "react"
 import  './Card.css'
+import { GlobalContext } from "../../context/GlobalContext"
+import {priceFormatter} from '../../utils/priceFormatter'
 
 
 export const Card = (props) => {
   const [style, setStyle] = useState("hideCard")
 
-  const newListCart = [...props.listCart]
-  // console.log(newListCart)
+  const context = useContext(GlobalContext)
+  const {listCart, setListCart} = context
 
   
   function addToCart(item) {
+    const newListCart = [...listCart]
+    
     const itemFound = newListCart.find((element) => element.id === item.id)     
+    
     if (!itemFound) {
       newListCart.push(item)
+      // setListCart(newListCart)
     }else {
-      item.quantity++
+      // const updateList = newListCart.filter((element)=> element.id !== item.id)
+      itemFound.quantity++
+      // updateList.push(itemFound)
+      // setListCart(updateList)
     }
-    props.setListCart(newListCart)
+    setListCart(newListCart)
+    
   }
   
-
   return(
     <ContainerCard className={style}>
         <Description>
@@ -49,7 +58,7 @@ export const Card = (props) => {
               <h1>{props.satellite.name.toUpperCase()}</h1>
               <Price>
                 <img src={coin}/>
-                <p>{props.satellite.price}</p>
+                <p>{priceFormatter.format(props.satellite.price)}</p>
               </Price>
             </InfoDiv>
             <InfoDiv>

@@ -15,7 +15,7 @@ export const Container = styled.div`
     height: 110px;
     width: 150px;
     left: 50px;
-    box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.6);
     /* border-radius: 50%; */
 
     img{
@@ -50,14 +50,14 @@ export const Info = styled.div`
 
   h1{
     color: #D2D0D0;
-    font-size: 14px;
+    font-size: 16px;
   }
   p{
     color: #D2D0D0;
-    font-size: 12px;
+    font-size: 14px;
   }
   span{
-    font-size: 12px;
+    font-size: 14px;
     color: #E1B629;
     font-weight: bold;
   }
