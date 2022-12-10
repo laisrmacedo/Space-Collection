@@ -13,9 +13,7 @@ function App() {
   const context = {
     itemsCart: itemsCart,
     listCart: listCart,
-    setListCart,
-    form: form,
-    setForm
+    setListCart
   }
 
   return (
