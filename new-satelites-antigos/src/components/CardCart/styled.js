@@ -27,15 +27,11 @@ export const Container = styled.div`
   .info-card{
     width: 90%;
     height: 100px;
-    /* margin-left: 130px; */
     padding-left: 170px;
-    /* background: linear-gradient(90deg, rgba(36,36,36,1) 0%, rgba(128,128,128,1) 100%, rgba(0,0,0,1) 100%); */
-    /* background: linear-gradient(90deg, rgba(71,71,71,1) 0%, rgba(92,92,92,0.8) 38%, rgba(45,45,45,0.1) 100%); */
     background-color: #404040;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    /* border: 1px red solid; */
   }
 
 `
