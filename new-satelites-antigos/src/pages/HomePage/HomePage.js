@@ -6,10 +6,6 @@ import { useEffect, useState } from "react";
 
 export const HomePage = () => {
   const [randomNumber, setRandomNumber] = useState(0)
-  
-  // setInterval(()=>{
-  //   setRandomNumber(Math.trunc(Math.random()*8))
-  // }, 8000)
 
   return (
     <Layout>

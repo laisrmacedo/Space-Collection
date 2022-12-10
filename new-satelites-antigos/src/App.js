@@ -5,15 +5,6 @@ import {GlobalContext} from './context/GlobalContext'
 function App() {
   const itemsCart = JSON.parse(localStorage.getItem("itemsCart"))
   const [listCart, setListCart] = useState([...itemsCart])
-  const [form, setForm] = useState({
-    name: "", 
-    // surname:"", 
-    // cep: "",
-    // city: "",
-    // state: "",
-    email: "",
-    password: ""
-  })
 
   useEffect(()=>{
     localStorage.setItem("itemsCart", JSON.stringify(listCart))

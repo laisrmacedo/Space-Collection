@@ -30,12 +30,8 @@ export const Card = (props) => {
     
     if (!itemFound) {
       newListCart.push(item)
-      // setListCart(newListCart)
     }else {
-      // const updateList = newListCart.filter((element)=> element.id !== item.id)
       itemFound.quantity++
-      // updateList.push(itemFound)
-      // setListCart(updateList)
     }
     setListCart(newListCart)
     
