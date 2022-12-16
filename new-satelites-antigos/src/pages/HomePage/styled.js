@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Rajdhani:wght@300&display=swap');
 
 export const BackgroundImg = styled.img`
   position: absolute;
@@ -15,40 +14,35 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
-
-  /* border: 1px solid red; */
   
   .text{
-    height: 100%;
+    height: 55%;
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
     padding-left: 8%;
-    
+    background: linear-gradient(90deg, rgba(255,255,255,0.26094187675070024) 61%, rgba(0,0,0,0) 97%);
     
     h1{
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: bolder;
       font-size: 44px;
-      color: white;
+      color: black;
     }
     
     h2{
-      color: #ededed;
+      color: black;
       font-size: 28px;
     }
   }
   
   .image{
     width: 40%;
-    height: 50%;
+    height: 55%;
     display: flex;
     position: relative;
-    /* justify-content: center; */
-    /* border: 1px solid red; */
+    /* background-color: rgb(0.68,0.68,0.68, 0.3); */
 
     div{
       overflow-y: hidden;
@@ -72,7 +66,6 @@ export const Container = styled.div`
 
   .image2{
     position: absolute;
-    /* top: 90px; */
     bottom: 0;
     left: 60px;
     height: 120px;
@@ -81,7 +74,6 @@ export const Container = styled.div`
 
   .image3{
     position: absolute;
-    /* top: 90px; */
     left: 130px;
     height: 200px;
     width: 200px;

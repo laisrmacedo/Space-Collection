@@ -29,6 +29,8 @@ export const Header = () => {
     setQuantityCart(soma)
   },[listCart])
 
+  const infoForm = JSON.parse(localStorage.getItem("form") || "{}")
+
   return(
     <>
       <ContainerHeader>
@@ -55,7 +57,11 @@ export const Header = () => {
             </div>
             <div>
               <Login onClick={() => goToLoginPage(navigate)}>
+              {JSON.stringify(infoForm) !== "{}" || infoForm.email ==="" ?
+               <p>Olá, {infoForm.name.charAt(0)?.toUpperCase() + infoForm.name.slice(1)}! </p>
+               :
                 <p>Login </p>
+              }
                 <img src={iconLogin}/>
               </Login>
               <Carrinho show={quantityCart === 0 ? "none" : "flex"}>

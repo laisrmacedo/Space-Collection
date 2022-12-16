@@ -58,7 +58,7 @@ export const CartPage = () => {
             })
             :
               <EmptyCart>
-                <p>YOUR SHOPPING CART IS EMPTY.</p>
+                <p>SEU CARRINHO ESTÁ VAZIO!</p>
               </EmptyCart>
           }
         </Items>

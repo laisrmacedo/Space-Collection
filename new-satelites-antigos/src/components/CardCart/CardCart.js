@@ -18,9 +18,6 @@ export const CardCart = (props) =>{
             <h4>{props.item.quantity}</h4>
             <button onClick={() => props.quantity(props.item, 1)}>&rang;</button>
           </div>
-          <div>
-            <p>AVAILABLE</p>
-          </div>
         </Quantity>
         <Delete onClick={() => props.deleteOfCart(props.item)}>
           <p>REMOVE</p>

@@ -59,7 +59,7 @@ export const Card = (props) => {
             </InfoDiv>
             <InfoDiv>
               <button onClick={() => setStyle("openCard")}>INFO</button>
-              <button onClick={() => addToCart(props.satellite)}>BUY</button>
+              <button onClick={() => addToCart(props.satellite)}>COMPRAR</button>
             </InfoDiv>
           </Information>
           <Detail1></Detail1>

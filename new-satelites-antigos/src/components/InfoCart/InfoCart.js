@@ -12,7 +12,7 @@ export const InfoCart = () => {
   const {listCart, setListCart} = context
 
   const [totalCart, setTotalCart] = useState(0);
-  const infoForm = JSON.parse(localStorage.getItem("form"))
+  const infoForm = JSON.parse(localStorage.getItem("form")|| "{}")
   
   useEffect(()=>{
     let soma = 0
@@ -33,13 +33,13 @@ export const InfoCart = () => {
       :
       <>
       <div className='box'>
-        {infoForm.email === ""?
+        {JSON.stringify(infoForm) === "{}" ?
           <>
             <p>Para finalizar, acesse sua conta</p>
             <button onClick={() => goToLoginPage(navigate)}>LOGIN</button>
           </>
         :
-          <p>Estamos quase finalizando, {infoForm.name.charAt(0).toUpperCase() + infoForm.name.slice(1)}!</p>
+          <p>Estamos quase finalizando!</p>
         }
       </div>
       <div className='box'>
@@ -58,7 +58,11 @@ export const InfoCart = () => {
         </div>
       </div>
       <button onClick={() => goToStorePage(navigate)}>CONTINUAR COMPRANDO</button>
+      {JSON.stringify(infoForm) === "{}" ? 
+      <div></div>
+      :
       <button onClick={() => finishCart()}>FINALIZAR</button>
+      }
       </>
       }
     </Container>

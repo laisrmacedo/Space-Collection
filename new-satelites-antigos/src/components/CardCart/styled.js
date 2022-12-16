@@ -7,7 +7,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px red solid; */
 
   .image-card{
     overflow-y: hidden;
@@ -16,7 +15,6 @@ export const Container = styled.div`
     width: 150px;
     left: 50px;
     box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.6);
-    /* border-radius: 50%; */
 
     img{
       object-fit: cover;
@@ -41,7 +39,6 @@ export const Info = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border: 1px solid blue; */
   gap: 5px;
 
   h1{
@@ -68,7 +65,7 @@ export const Quantity = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* border: 1px solid blue; */
+
     p{
       color: white;
     font-size: 12px;
@@ -81,9 +78,12 @@ export const Quantity = styled.div`
     color: black;
     cursor: pointer;
     border: none;
-  }
-  button:hover{
-    opacity: 0.9;
+    &hover{
+      opacity: 0.8;
+    }
+    &:active{
+      color: gray;
+    }
   }
   h4{
     color: white;
@@ -96,4 +96,11 @@ export const Delete = styled.button`
   justify-self: end;
   cursor: pointer;
   border: none;
+  &:hover{
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 0.8;
+    background-color: #a41e1e;
+  }
 `

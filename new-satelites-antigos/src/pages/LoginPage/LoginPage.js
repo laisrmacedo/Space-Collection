@@ -25,19 +25,19 @@ export const LoginPage = () => {
 
   const clearForm = () => {
     setForm({})
-    localStorage.setItem("form", JSON.stringify(form))
+    localStorage.setItem("form", JSON.stringify({}))
   }
 
-  const infoForm = JSON.parse(localStorage.getItem("form"))
-  console.log(infoForm)
+  const infoForm = JSON.parse(localStorage.getItem("form") || "{}")
+ 
   return (
     <Layout>
       <BackgroundImg src='https://images.pexels.com/photos/11559497/pexels-photo-11559497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
       <Container>
         <DivForm>
-          {infoForm.email !== ""?
+          {JSON.stringify(infoForm) !== "{}" ?
           <>
-            <p>Bem-vindo (a), {infoForm.name.charAt(0).toUpperCase() + infoForm.name.slice(1)}! </p>
+            <p>Bem-vindo (a), {infoForm.name.charAt(0)?.toUpperCase() + infoForm.name.slice(1)}! </p>
             <button className="logout" onClick={()=>clearForm()}>SAIR</button>
           </>
         
@@ -46,6 +46,7 @@ export const LoginPage = () => {
             <div className="nome-sobrenome">
               <label>Nome</label>
               <input 
+                required
                 type="text" 
                 name="name"
                 value={form.name} 

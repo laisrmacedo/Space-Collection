@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import {GlobalContext} from './context/GlobalContext'
 
 function App() {
-  const itemsCart = JSON.parse(localStorage.getItem("itemsCart"))
+  const itemsCart = JSON.parse( localStorage.getItem("itemsCart") || "[]")
   const [listCart, setListCart] = useState([...itemsCart])
 
   useEffect(()=>{

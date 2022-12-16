@@ -17,13 +17,11 @@ export const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid white; */
 `
 export const ContainerLogo = styled.div`
   display: flex;
   justify-content: space-between;
   width: 30%;
-  /* border: 1px solid red; */
 
   > img {
     height: 24px;
@@ -33,7 +31,6 @@ export const ContainerDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* border: 1px solid red; */
 
   > div {
     height: 1px;
@@ -44,22 +41,22 @@ export const ContainerDiv = styled.div`
 `
 
 export const Nav = styled.nav`
-  width: 35%;
+  width: 40%;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: flex-end;
+  gap: 40px;
   color: #808080;
   font-size: 20px;
   font-weight: bold;
   
   >div{
-    /* border: 1px solid red; */
     display: flex;
-    justify-content: space-between;
-    width: 35%;
+    justify-content: flex-end;
+    width: 70%;
+    gap:20px;
   }
   
   span{
@@ -80,10 +77,8 @@ export const Nav = styled.nav`
     }
     
     p{
-      /* border: 1px solid white; */
       font-size: 18px;
       height: 28px;
-      
     }
 
     img{
@@ -95,7 +90,6 @@ export const Nav = styled.nav`
   export const Carrinho = styled.div`
     height: 30px;
     width: 30px;
-    /* border: 1px solid red; */
     display: flex;
     align-items: center;
     position: relative;
@@ -117,7 +111,6 @@ export const Nav = styled.nav`
         font-family: system-ui;
         font-size: 10px;
         position: relative;
-        /* top: -1px; */
         left: -1px;
       }
     }
