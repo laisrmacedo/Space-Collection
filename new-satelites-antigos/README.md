@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Projeto Frontend - React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![logo-space-collection](./src/assets/space-collection.png)
 
-## Available Scripts
+## 📝 Descrição
+Esse projeto foi um desafio proposto pela Labenu para desenvolver um e-commerce de itens espaciais. Para isso, minha escolha para linha de produtos foram os satélites antigos. <br/>
+<strong>Objetivo:</strong> praticar conceitos fundamentais relacionados ao React. 
 
-In the project directory, you can run:
+O e-commerce possui quatro páginas: Home, Store, Login e Cart.
 
-### `npm start`
+### Home
+É a página inicial do site. Nela existe uma introdução aos produtos ofertados.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Store
+Esta página possui a lista de itens, neste caso os satélites antigos, que podem ser comprados pelo usuário e os filtros de busca. 
+Cada item é apresentado em um card, com o nome, o valor, o botão para mostrar mais informações e o botão para adiconar à área de compra. No filtros, é possível buscar pelo nome do satélite, por faixa de preço e ordenar pelo ano em que o satélite foi lançado ao espaço. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Como o intuito do projeto foi praticar os conceitos introdutórios ao React, essa lista possui apenas 8 itens em forma de dados mocados. 
 
-### `npm test`
+### Login
+Esta página mostra um formulário com nome, email e senha, que precisa ser preenchido para que o usuário consiga finalizar sua compra.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Cart
+Esta página mostra os itens escolhidos pelo usuário e as informações gerais da compra. É possível aumentar ou diminuir a quantidade de itens ou removê-lo do carrinho. 
 
-### `npm run build`
+Caso o formulário de login não tenha sido preenchido, o botão de login aparece para o usuário e ele é redirecionado ao clicar. Depois do login, o usuário pode fizalizar sua compra quando quiser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📌 Como rodar este projeto?
+Você pode acessar o site clicando no link:
+[spacecollection.surge.sh/](https://spacecollection.surge.sh/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 💻 Funcionalidades
+- Filtro de itens pelo nome e faixa de preço;
+- Ordenação dos satélites pelo ano de lançamento;
+- Mostrar informações adicionais no card; 
+- Adicionar itens ao carrinho;
+- Diminuir ou aumentar a quantidade do item no carrinho;
+- Remover item do carrinho;
+- Verificação de login;
+- Finalização da compra limpando o carrinho.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠 Tecnologias Utilizadas
 
-### `npm run eject`
+- Componentes em React;
+- Styled-Components; 
+- Inputs controlados;
+- Fluxos de dados; 
+- Renderização condicional;
+- Filtros e ordenação;
+- Hooks;
+- LocalStorage; 
+- React Router;
+- Formulários;
+- Estado Global.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 👩‍💻 Pessoas autoras
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### LAYOUT E CÓDIGO 
+### Laís Rodrigues Macedo 
+📧 laisrodriguesmacedo@gmail.com <br/>
+📞 (+49) 174 7781517
