@@ -29,7 +29,7 @@ Caso o formulário de login não tenha sido preenchido, o botão de login aparec
 Você pode acessar o site clicando no link:
 [spacecollection.surge.sh/](https://spacecollection.surge.sh/)
 
-## 💻 Funcionalidades
+## 🕹 Funcionalidades
 - Filtro de itens pelo nome e faixa de preço;
 - Ordenação dos satélites pelo ano de lançamento;
 - Mostrar informações adicionais no card; 
